@@ -1,0 +1,26 @@
+.card {
+    max-width: 50%;
+    float: center;
+    margin-left: 24%;
+    align-content: center;
+    margin-bottom: 5px; 
+  }
+.dashboard{
+  margin-bottom: 5px;
+  background-color: rgb(211, 6, 6);
+  text-align: center;
+  color: white;
+  font-style: italic;
+  font-size: 30px;
+  font-weight: bold;
+}
+.rating{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 6px;
+  float: right;
+  font-size: 15px;
+  color: rgb(74, 4, 139)
+}

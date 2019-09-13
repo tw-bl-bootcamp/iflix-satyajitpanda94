@@ -1,0 +1,39 @@
+<div class="background">
+
+    <mat-card class="Login-card">
+
+        <mat-card-title style="color: rgb(35, 3, 150)" align="center">iFlix Login</mat-card-title>
+        <form>
+
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>e-Mail</mat-label>
+                    <input matInput type="email" required [formControl]="email" name="email">
+                    <mat-icon matSuffix color="primary">mail</mat-icon>
+                    <mat-error *ngIf="email.invalid">{{getErrorMessageForEmail()}}</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" required [formControl]="password"
+                        name="Password">
+                    <button style="width: fit-content" mat-icon-button matSuffix (click)="hide = !hide"
+                        [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon color="primary">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                    <mat-error *ngIf="password.invalid">{{getErrorMessageForPassword()}}</mat-error>
+                </mat-form-field>
+            </div>
+
+
+            <button [disabled]="enableLoginButton()" style="color: rgb(0, 0, 119)" (click)="onLogin()"
+                mat-raised-button>Login</button>
+
+
+
+        </form>
+
+    </mat-card>
+</div>
